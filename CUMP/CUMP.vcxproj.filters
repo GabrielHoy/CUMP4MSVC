@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4dacf2f4-4ae8-4542-842b-a55a2137c6db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\_set.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\aclear.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\ainit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\ainit2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\aiset_mpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\aset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\aset_mpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\clear.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\get_dfl_prec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\init2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\iset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\iset_mpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\set_dfl_prec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cumpf\set_mpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mpf\set_cumpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mpf\aset_cumpf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cumpf\Makefile.am" />
+    <None Include="mpf\Makefile.am" />
+    <None Include="include\cump\mpn\generic\sub_n.impl" />
+    <None Include="include\cump\mpn\generic\add.impl" />
+    <None Include="include\cump\mpn\generic\add_1.impl" />
+    <None Include="include\cump\mpn\generic\add_n.impl" />
+    <None Include="include\cump\mpn\generic\addmul_1.impl" />
+    <None Include="include\cump\mpn\generic\cmp.impl" />
+    <None Include="include\cump\mpn\generic\copyd.impl" />
+    <None Include="include\cump\mpn\generic\copyi.impl" />
+    <None Include="include\cump\mpn\generic\lshift.impl" />
+    <None Include="include\cump\mpn\generic\lshiftc.impl" />
+    <None Include="include\cump\mpn\generic\mul.impl" />
+    <None Include="include\cump\mpn\generic\mul_1.impl" />
+    <None Include="include\cump\mpn\generic\mul_basecase.impl" />
+    <None Include="include\cump\mpn\generic\neg.impl" />
+    <None Include="include\cump\mpn\generic\rshift.impl" />
+    <None Include="include\cump\mpn\generic\sub.impl" />
+    <None Include="include\cump\mpn\generic\sub_1.impl" />
+    <None Include="include\cump\mpn\CUDA\mul_basecase.impl" />
+    <None Include="include\cump\mpn\CUDA\addmul.impl" />
+    <None Include="include\cump\mpn\CUDA\mul_2.impl" />
+    <None Include="include\cump\mpf\sub.impl" />
+    <None Include="include\cump\mpf\add.impl" />
+    <None Include="include\cump\mpf\clear.impl" />
+    <None Include="include\cump\mpf\init.impl" />
+    <None Include="include\cump\mpf\init2.impl" />
+    <None Include="include\cump\mpf\iset.impl" />
+    <None Include="include\cump\mpf\mul.impl" />
+    <None Include="include\cump\mpf\neg.impl" />
+    <None Include="include\cump\mpf\set.impl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cump\utility.cuh" />
+    <ClInclude Include="include\cump\cump.cuh" />
+    <ClInclude Include="include\cump\def.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cump\longlong.cuh" />
+    <ClInclude Include="include\cump\pointer_traits.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cump\strideptr.cuh" />
+    <ClInclude Include="include\cump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cump-impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="cumpf\_ainit.cu" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{04dad0ef-bbf1-48ce-9227-fd87e552164c}</ProjectGuid>
+    <RootNamespace>CUMP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.8.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CUMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CUMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;CUMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(CUDA_PATH)include\cuda;$(CUDA_PATH)include;$(ProjectDir)include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>$(CUDA_PATH)\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);cudart.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;CUMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cumpf\aclear.c" />
+    <ClCompile Include="cumpf\ainit.c" />
+    <ClCompile Include="cumpf\ainit2.c" />
+    <ClCompile Include="cumpf\aiset_mpf.c" />
+    <ClCompile Include="cumpf\aset.c" />
+    <ClCompile Include="cumpf\aset_mpf.c" />
+    <ClCompile Include="cumpf\clear.c" />
+    <ClCompile Include="cumpf\get_dfl_prec.c" />
+    <ClCompile Include="cumpf\init.c" />
+    <ClCompile Include="cumpf\init2.c" />
+    <ClCompile Include="cumpf\iset.c" />
+    <ClCompile Include="cumpf\iset_mpf.c" />
+    <ClCompile Include="cumpf\set.c" />
+    <ClCompile Include="cumpf\set_dfl_prec.c" />
+    <ClCompile Include="cumpf\set_mpf.c" />
+    <ClCompile Include="cumpf\_set.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="memory.c" />
+    <ClCompile Include="mpf\aset_cumpf.c" />
+    <ClCompile Include="mpf\set_cumpf.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cumpf\Makefile.am" />
+    <None Include="mpf\Makefile.am" />
+    <None Include="Source.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cump-impl.h" />
+    <ClInclude Include="include\cump.h" />
+    <ClInclude Include="include\cump\cump.cuh" />
+    <ClInclude Include="include\cump\def.h" />
+    <ClInclude Include="include\cump\longlong.cuh" />
+    <ClInclude Include="include\cump\pointer_traits.hpp" />
+    <ClInclude Include="include\cump\strideptr.cuh" />
+    <ClInclude Include="include\cump\utility.cuh" />
+    <ClInclude Include="include\cump\mpf\add.impl" />
+    <ClInclude Include="include\cump\mpf\clear.impl" />
+    <ClInclude Include="include\cump\mpf\init.impl" />
+    <ClInclude Include="include\cump\mpf\init2.impl" />
+    <ClInclude Include="include\cump\mpf\iset.impl" />
+    <ClInclude Include="include\cump\mpf\mul.impl" />
+    <ClInclude Include="include\cump\mpf\neg.impl" />
+    <ClInclude Include="include\cump\mpf\set.impl" />
+    <ClInclude Include="include\cump\mpf\sub.impl" />
+    <ClInclude Include="include\cump\mpn\CUDA\addmul.impl" />
+    <ClInclude Include="include\cump\mpn\CUDA\mul_2.impl" />
+    <ClInclude Include="include\cump\mpn\CUDA\mul_basecase.impl" />
+    <ClInclude Include="include\cump\mpn\generic\add.impl" />
+    <ClInclude Include="include\cump\mpn\generic\addmul_1.impl" />
+    <ClInclude Include="include\cump\mpn\generic\add_1.impl" />
+    <ClInclude Include="include\cump\mpn\generic\add_n.impl" />
+    <ClInclude Include="include\cump\mpn\generic\cmp.impl" />
+    <ClInclude Include="include\cump\mpn\generic\copyd.impl" />
+    <ClInclude Include="include\cump\mpn\generic\copyi.impl" />
+    <ClInclude Include="include\cump\mpn\generic\lshift.impl" />
+    <ClInclude Include="include\cump\mpn\generic\lshiftc.impl" />
+    <ClInclude Include="include\cump\mpn\generic\mul.impl" />
+    <ClInclude Include="include\cump\mpn\generic\mul_1.impl" />
+    <ClInclude Include="include\cump\mpn\generic\mul_basecase.impl" />
+    <ClInclude Include="include\cump\mpn\generic\neg.impl" />
+    <ClInclude Include="include\cump\mpn\generic\rshift.impl" />
+    <ClInclude Include="include\cump\mpn\generic\sub.impl" />
+    <ClInclude Include="include\cump\mpn\generic\sub_1.impl" />
+    <ClInclude Include="include\cump\mpn\generic\sub_n.impl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="cumpf\_ainit.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.8.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,13 @@
+LIBRARY CUMP
+EXPORTS
+	cumpf_set_default_prec
+	cumpf_get_default_prec
+	cumpf_init
+	cumpf_init2
+	cumpf_init_set
+	cumpf_clear
+	cumpf_set
+	cumpf_array_init
+	cumpf_array_init2
+	cumpf_array_clear
+	cumpf_array_set
